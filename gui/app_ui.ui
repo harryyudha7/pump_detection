@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1824</width>
+    <height>1026</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="process_flow_btn">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Process Flow</string>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="summary_btn">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Summary</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="field_decline_btn">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>100</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Field Decline</string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="main_frame">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>10</y>
+      <width>1741</width>
+      <height>981</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="diagram_page">
+     <widget class="QLabel" name="diagram_title_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Process Flow Diagram</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="field_decline_page">
+     <widget class="QLabel" name="decline_analysis_title">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Field Decline Analysis</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="get_data_btn">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Get Data</string>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="img_decline">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>60</y>
+        <width>1461</width>
+        <height>461</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="decline_calc_scroll">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>550</y>
+        <width>381</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="decline_calc_widget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>379</width>
+         <height>359</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="decline_calc_label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Decline Calculation</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="add_case_btn">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>91</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add Case</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="add_case_input">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>41</y>
+          <width>221</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhNone</set>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QToolBox" name="decline_case">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>90</y>
+          <width>321</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="case_1">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>321</width>
+           <height>181</height>
+          </rect>
+         </property>
+         <attribute name="label">
+          <string>Page 1</string>
+         </attribute>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>151</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Decline Correlation</string>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="comboBox_2">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>0</y>
+            <width>161</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>Exponential</string>
+           </property>
+          </item>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="case_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>321</width>
+           <height>181</height>
+          </rect>
+         </property>
+         <attribute name="label">
+          <string>Page 2</string>
+         </attribute>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="summary_page">
+     <widget class="QLabel" name="summary_title">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Summary</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Separator-1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Separator-2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Separator-3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vessel</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="get_data_summary_btn">
+      <property name="geometry">
+       <rect>
+        <x>1630</x>
+        <y>90</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Get Data</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="table_summary_btn">
+      <property name="geometry">
+       <rect>
+        <x>1524</x>
+        <y>90</y>
+        <width>101</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Table Summary</string>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>1691</width>
+        <height>731</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="table_summary">
+     <widget class="QLabel" name="table_summary_title">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Table Summary</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="table_summary_widget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>1711</width>
+        <height>871</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="well_xx_properties">
+     <widget class="QLabel" name="well_properties_title">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>231</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Well-XX Data Properties</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="prod_data_group">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>341</width>
+        <height>871</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Production Data</string>
+      </property>
+      <widget class="QTableView" name="table_prod_data">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>321</width>
+         <height>841</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>490</y>
+        <width>1381</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Chart</string>
+      </property>
+      <widget class="QGraphicsView" name="graphicsView_3">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>60</y>
+         <width>1281</width>
+         <height>361</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="normalize_btn">
+       <property name="geometry">
+        <rect>
+         <x>1100</x>
+         <y>30</y>
+         <width>71</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Normalize</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="table_result_btn">
+       <property name="geometry">
+        <rect>
+         <x>1180</x>
+         <y>30</y>
+         <width>71</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Table Result</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="calibrate_btn">
+       <property name="geometry">
+        <rect>
+         <x>1260</x>
+         <y>30</y>
+         <width>71</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Calibrate</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="tft_monitor_group">
+      <property name="geometry">
+       <rect>
+        <x>359</x>
+        <y>59</y>
+        <width>681</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>TFT Monitoring</string>
+      </property>
+      <widget class="QTableView" name="table_tft">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>661</width>
+         <height>351</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="param_model_group">
+      <property name="geometry">
+       <rect>
+        <x>1050</x>
+        <y>60</y>
+        <width>691</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Parameters Model</string>
+      </property>
+      <widget class="QPushButton" name="wellbore_tbl_btn">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>20</y>
+         <width>101</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Wellbore Table</string>
+       </property>
+      </widget>
+      <widget class="QTableView" name="table_param_model">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>661</width>
+         <height>351</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="separator_properties">
+     <widget class="QLabel" name="separator_properties_title">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Separator-X Properties</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="separator_data">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>601</width>
+        <height>881</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Separator Data</string>
+      </property>
+      <widget class="QTableWidget" name="table_separator_data">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>571</width>
+         <height>841</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="tft_monitoring">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>50</y>
+        <width>541</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>TFT Monitoring</string>
+      </property>
+      <widget class="QTableWidget" name="table_tft_data">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>501</width>
+         <height>391</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="injection_properties">
+     <widget class="QLabel" name="injection_properties_title">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Injector-X Data Properties</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="injection_data">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>621</width>
+        <height>891</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Injection Data</string>
+      </property>
+      <widget class="QTableView" name="table_injection_data">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>581</width>
+         <height>841</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="steam_vessel_properties">
+     <widget class="QLabel" name="steam_vessel_properties_title">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Steam Vessel Data Properties</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="tft_monitoring_sv">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>60</y>
+        <width>541</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>TFT Monitoring</string>
+      </property>
+      <widget class="QTableWidget" name="table_tft_data_sv">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>501</width>
+         <height>391</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="separator_data_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>60</y>
+        <width>601</width>
+        <height>881</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Production Data</string>
+      </property>
+      <widget class="QTableWidget" name="table_separator_data_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>571</width>
+         <height>841</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1824</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

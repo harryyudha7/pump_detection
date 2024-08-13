@@ -1,7 +1,7 @@
 import sys
 from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel, QListWidgetItem, QWidget, QGridLayout, QFrame, QComboBox, QPushButton, QSpacerItem, QRadioButton
 from PyQt6.QtCore import Qt, QSize
-from PyQt6.QtGui import QIcon, QPixmap, QFont
+from PyQt6.QtGui import QIcon, QPixmap, QFont, QBrush, QColor
 
 # Import the UI class from the 'main_ui' module
 from main_ui import Ui_MainWindow
@@ -105,6 +105,7 @@ class MainWindow(QMainWindow):
             item_new = QListWidgetItem()
             item_new.setIcon(QIcon(menu.get("icon")))
             item_new.setText(menu.get("name"))
+            # item_new.setForeground(QColor.black)
             self.side_menu.addItem(item_new)
             self.side_menu.setCurrentRow(0)
 

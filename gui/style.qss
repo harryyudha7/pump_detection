@@ -24,6 +24,7 @@ QStackedWidget {
 QListWidget,
 #title_frame {
     background-color: #f0f0f0;
+    color: #000000
 }
 
 /* Define border styles for '#stackedWidget' and '#title_frame' */
